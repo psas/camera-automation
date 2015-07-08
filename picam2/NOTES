@@ -1,0 +1,29 @@
+###
+# 2015
+###
+
+GPIO and sequencing:
+picam2 stores video locally and triggers 360 GoPro module via GPIO
+
+Functionality to start the GoPros needs to be added to go_cameras_go.sh
+
+
+###
+# Old stuff
+###
+
+# works, but requires the receiver to connect to this raspi before data will start flowing:
+cvlc v4l2:///dev/video0 --v4l2-width 1920 --v4l2-height 1080 --v4l2-chroma h264 --sout '#rtp{sdp=rtsp://:8554/}'
+
+# SAP announcement works but no video appears
+cvlc v4l2:///dev/video0 --v4l2-width 1920 --v4l2-height 1080 --v4l2-chroma h264 --sout '#rtp{dst=225.0.0.1,port=5555,sdp=sap}'
+
+# SDP file is created but when loaded at the client, no video appears
+cvlc v4l2:///dev/video0 --v4l2-width 1920 --v4l2-height 1080 --v4l2-chroma h264 --sout '#rtp{dst=225.0.0.1,port=5555,sdp=file:///tmp/cam.sdp}'
+
+cvlc v4l2:///dev/video0 --v4l2-width 1920 --v4l2-height 1080 --v4l2-chroma h264 --sout '#rtp{dst=10.10.10.119,port=5555}'
+cvlc v4l2:///dev/video0 --v4l2-width 1920 --v4l2-height 1080 --v4l2-chroma h264 --sout '#rtp{dst=10.10.10.119,port=5555,sdp=file:///tmp/cam.sdp}'
+cvlc v4l2:///dev/video0 --v4l2-width 1920 --v4l2-height 1080 --v4l2-chroma h264 --sout '#rtp{dst=10.10.10.119,port=5555,sdp=http://0.0.0.0:9000/cam.sdp}'
+cvlc v4l2:///dev/video0 --v4l2-width 1920 --v4l2-height 1080 --v4l2-chroma h264 --sout '#rtp{dst=10.10.10.119,port=5555,sdp=http://10.10.10.50:9000/cam.sdp}'
+cvlc v4l2:///dev/video0 --v4l2-width 1920 --v4l2-height 1080 --v4l2-chroma h264 --sout '#rtp{dst=10.10.10.119,port=5555,sdp=http://@:9000/cam.sdp}'
+cvlc v4l2:///dev/video0 --v4l2-width 1920 --v4l2-height 1080 --v4l2-chroma h264 --sout '#std{access=udp,mux=ts,dst=10.10.10.119:5555}'
