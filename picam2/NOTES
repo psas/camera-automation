@@ -5,7 +5,9 @@
 GPIO and sequencing:
 picam2 stores video locally and triggers 360 GoPro module via GPIO
 
-Functionality to start the GoPros needs to be added to go_cameras_go.sh
+Functionality to start the GoPros will not be added to go_cameras_go.sh
+because we want to verify PiCams are rolling before hitting the GoPro
+one-shot.
 
 
 ###
