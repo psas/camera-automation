@@ -6,7 +6,7 @@ Scripts and extra to run cameras on the flight computer
 - Mount and cd into the new root filesystem on the second partition
 - Run the following commands:
 ```
-wget https://github.com/psas/camera-automation/blob/master/install.sh -O tmp/install.sh
+wget https://raw.githubusercontent.com/psas/camera-automation/master/install.sh -O tmp/install.sh
 sudo sh tmp/install.sh
 ```
 - This gets everything set up.  Make sure you have working Internet access for the first time it boots up so that packages can be updated.
