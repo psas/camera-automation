@@ -15,9 +15,10 @@ ln -sf ../home/pi/camera-automation/picam2/hosts ${ROOT}/etc/
 ln -sf ../home/pi/camera-automation/picam2/hostname ${ROOT}/etc/
 ln -sf ../home/pi/camera-automation/picam2/resolvconf.conf ${ROOT}/etc/
 
-cd $ROOT
+cd ${ROOT}/home/pi
 git clone https://github.com/psas/GeigerLog.git
-ln -sf ../home/pi/GeigerLog/init.d-geiger ${ROOT}/etc/init.d/geiger
+chown -R pi:pi GeigerLog
+ln -sf ../../home/pi/GeigerLog/init.d-geiger ${ROOT}/etc/init.d/geiger
 sync
 
 echo "Done!"
