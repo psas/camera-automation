@@ -9,9 +9,10 @@ Scripts and extra to run cameras on the flight computer
 wget https://raw.githubusercontent.com/psas/camera-automation/master/install.sh -O tmp/install.sh
 sudo sh tmp/install.sh
 ```
-- This gets everything set up.  Make sure you have working Internet access for the first time it boots up so that packages can be updated.
+- This will finish with "Done."  Unmount and remove the card from your imaging system.
+- Plug SD card into Raspberry Pi.  Make sure you have Internet connectivity for the first time it boots up so that packages can be updated.
 - Boot the system and login with default raspbian credentials (pi/raspberry)
 - Set a new password when prompted
-- Enable Camera when raspi-config comes up (blue background)
+- Enable Camera when raspi-config comes up (blue background).  Don't reboot when exiting.
 - Accept packages to be installed
 - Reboot when prompted to expand the filesystem
