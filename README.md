@@ -12,5 +12,6 @@ sudo sh tmp/install.sh
 - This gets everything set up.  Make sure you have working Internet access for the first time it boots up so that packages can be updated.
 - Boot the system and login with default raspbian credentials (pi/raspberry)
 - Set a new password when prompted
+- Enable Camera when raspi-config comes up (blue background)
 - Accept packages to be installed
 - Reboot when prompted to expand the filesystem
