@@ -2,10 +2,17 @@
 
 if [ $(id -u) -ne 0 ]; then
     echo "Must run as root to install packages"
-    exec sudo $0 "$@"
+    exec sudo $HOME/camera-automation/$(hostname)/first-boot.sh
 fi
 
+echo "############################################################"
+echo "# Configuring this pi as $(hostname)"
+echo "# Please set a password and then enable the camera"
+echo "############################################################"
+
 passwd pi
+raspi-config
 apt-get update
-xargs -ra /home/pi/camera-automation/$(hostname)/package-dependancies.list apt-get install
+xargs -ra /home/pi/camera-automation/$(hostname)/package-dependencies.list apt-get install
+raspi-config --expand-rootfs
 rm /home/pi/.bash_login
