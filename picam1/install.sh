@@ -12,6 +12,6 @@ sed -i '/^# Print the IP address/i/home/pi/gpio.sh\n' ${ROOT}/etc/rc.local
 ln -sf ../../home/pi/camera-automation/picam1/interfaces ${ROOT}/etc/network/interfaces
 ln -sf ../home/pi/camera-automation/picam1/hosts ${ROOT}/etc/hosts
 ln -sf ../home/pi/camera-automation/picam1/hostname ${ROOT}/etc/hostname
-ln -sf ../home/pi/camera-automation/picam1/resolv.conf ${ROOT}/etc/resolv.conf
+ln -sf ../home/pi/camera-automation/picam1/resolvconf.conf ${ROOT}/etc/resolvconf.conf
 
 echo "Done!"
