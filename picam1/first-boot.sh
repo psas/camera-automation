@@ -16,3 +16,8 @@ apt-get update
 xargs -ra /home/pi/camera-automation/$(hostname)/package-dependencies.list apt-get install
 rm /home/pi/.bash_login
 raspi-config --expand-rootfs
+
+echo "############################################################"
+echo "# Rebooting"
+echo "############################################################"
+reboot

@@ -14,5 +14,6 @@ ln -sf ../../home/pi/camera-automation/picam1/interfaces ${ROOT}/etc/network/int
 ln -sf ../home/pi/camera-automation/picam1/hosts ${ROOT}/etc/hosts
 ln -sf ../home/pi/camera-automation/picam1/hostname ${ROOT}/etc/hostname
 ln -sf ../home/pi/camera-automation/picam1/resolvconf.conf ${ROOT}/etc/resolvconf.conf
+sync
 
 echo "Done!"

@@ -15,4 +15,4 @@ sudo sh tmp/install.sh
 - Set a new password when prompted
 - Enable Camera when raspi-config comes up (blue background).  Don't reboot when exiting.
 - Accept packages to be installed
-- Reboot when prompted to expand the filesystem
+- The picam will reboot one more time to complete filesystem expansion
