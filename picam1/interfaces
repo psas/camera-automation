@@ -6,7 +6,7 @@ allow-hotplug eth0
 iface eth0 inet static
 	address 10.10.10.50
 	netmask 255.255.255.0
-	gateway 10.10.10.10
+	gateway 10.10.10.1
 
 allow-hotplug wlan0
 iface wlan0 inet manual
