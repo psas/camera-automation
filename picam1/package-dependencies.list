@@ -5,4 +5,4 @@ traceroute
 wavemon
 iptraf
 nmap
-gstreamer
+gstreamer1.0-tools
