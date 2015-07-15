@@ -9,7 +9,7 @@ raspivid -n -w 640 -h 480 -b 500000 -fps 30 -rot 270 -t 0 -o - | \
     ! udpsink host=10.10.10.10 port=30000 \
     splitter. \
     ! queue \
-    ! filesink location="$(mktemp /home/pi/video/XXXXXX.h264)"
+    ! filesink location="$(mktemp /home/pi/video/XXXXXX.h264)" &
 
 # Transcoding could be accomplished with more horsepower like this:
 #    # Add these lines after h264parse
