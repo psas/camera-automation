@@ -2,6 +2,7 @@
 
 echo "Using root directory: ${ROOT:=${1:-.}}"
 
+install -o 1000 -g 1000 -m 755 -d ${ROOT}/home/pi/video/
 install -o 1000 -g 1000 -m 700 -d ${ROOT}/home/pi/.ssh/
 ln -sf ../camera-automation/picam1/authorized_keys2 ${ROOT}/home/pi/.ssh/authorized_keys2
 ln -sf camera-automation/picam1/go_cameras_go.sh ${ROOT}/home/pi/go_cameras_go.sh
