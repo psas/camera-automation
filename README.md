@@ -7,9 +7,10 @@ Scripts and extra to run cameras on the flight computer
 - Run the following commands:
 ```
 wget https://raw.githubusercontent.com/psas/camera-automation/master/install.sh -O tmp/install.sh
-sudo sh tmp/install.sh
+sudo sh tmp/install.sh [hostname [root_path]]
 ```
-- This will finish with "Done."  Unmount and remove the card from your imaging system.
+- You can specify a hostname above or picam1 will be installed by default.
+- When "Done." unmount and remove the card from your imaging system.
 - Plug SD card into Raspberry Pi.  Make sure you have Internet connectivity for the first time it boots up so that packages can be updated.
 - Boot the system and login with default raspbian credentials (pi/raspberry)
 - Set a new password when prompted
