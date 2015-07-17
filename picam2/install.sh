@@ -17,7 +17,7 @@ ln -sf ../home/pi/camera-automation/picam2/resolvconf.conf ${ROOT}/etc/
 
 cd ${ROOT}/home/pi
 git clone https://github.com/psas/GeigerLog.git
-chown -R pi:pi GeigerLog
+chown -R 1000:1000 GeigerLog
 ln -sf ../../home/pi/GeigerLog/init.d-geiger ${ROOT}/etc/init.d/geiger
 sync
 
